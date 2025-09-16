@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Page</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .container div {
+      font-size: 2rem;
+      color: #0056b3;
+      text-decoration: underline;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    #random1 {
+      font-style: italic;
+      color: #444;
+    }
+
+    #pa1 {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul li {
+      padding: 8px;
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    ul li:hover {
+      transform: scale(1.05);
+      color: #0056b3;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: 2px solid #0056b3;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #ffeb3b;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    label, input {
+      margin-top: 15px;
+      display: block;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    input {
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #0056b3;
+      box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>Welcome to CSS Basics</div>
+    <p>This is a <span style="color: blue;">simple</span> paragraph showing basic styles.</p>
+    <p id="random1">This paragraph uses an ID selector for special styling</p>
+    <ul>
+      <li>First item</li>
+      <li id="pa1"><span style="color: red;">Second Item</span></li>
+      <li>Third item</li>
+    </ul>
+    <a href="https://youtube.com" target="_blank">Hover over this link</a>
+    <br><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+  </div>
+</body>
+</html>
