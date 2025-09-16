@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      background: #2d89ef;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #2d89ef;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #2d89ef;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 0 10px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (min-width: 701px) and (max-width: 900px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      body {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MySite</h1>
+    <nav>
+      <div class="menu-toggle">☰</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Responsive</h2>
+      <p>Responsive</p>
+    </div>
+    <div class="card">
+      <h2>Responsive</h2>
+      <p>Responsive</p>
+    </div>
+    <div class="card">
+      <h2>Responsive</h2>
+      <p>Responsive</p>
+    </div>
+    <div class="card">
+      <h2>Card Four</h2>
+      <p>Responsive</p>
+    </div>
+  </main>
+
+  <script>
+    
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
